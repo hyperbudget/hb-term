@@ -12,6 +12,7 @@ import (
 	"strings"
 
 	ui "github.com/gizak/termui"
+	"github.com/gizak/termui/widgets"
 )
 
 type transaction struct {
@@ -101,14 +102,10 @@ func main() {
 		})
 	}
 
-	table1 := ui.NewTable()
+	table1 := widgets.NewTable()
 	table1.Rows = rows1
-	table1.FgColor = ui.ColorWhite
-	table1.BgColor = ui.ColorDefault
-	table1.Y = 0
-	table1.X = 0
-	table1.Width = 150
-	table1.Height = len(rows1)*2 + 1
+	table1.TextStyle = ui.NewStyle(ui.ColorWhite)
+	table1.SetRect(0, 0, 60, 100)
 
 	ui.Render(table1)
 
