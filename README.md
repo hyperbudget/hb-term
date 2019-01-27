@@ -1,7 +1,9 @@
 # How?
 
+Step 1: get go1.11, then:
+
 ```
-go build -o build/hb-term
+make
 ./bin/hb-term
 ```
 
